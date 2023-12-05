@@ -38,8 +38,8 @@ void prims(int src){
         total++;
         visited.insert(node.second);
         for(auto ele : gp[node.second]){
-            if(!visited.count(ele.first) and mp[ele.first]> via[node.second]+ ele.second){
-                pq.push({ele.first, ele.second});
+            if(!visited.count(ele.first) and mp[ele.first]> mp[node.second]+ ele.second){
+                pq.push({ele.second, ele.first});
                 mp[ele.first]= ele.second + mp[node.second];
                 via[ele.first]= node.second;
             }

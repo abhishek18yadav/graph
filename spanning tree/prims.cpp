@@ -22,7 +22,7 @@ void prims(int src){
     for(int i=0; i<v; i++){
         mp[i]=INT_MAX;
     }
-    priority_queue<pp>pq;
+    priority_queue<pp,vector<pp>, greater<pp>>pq;
     pq.push({0,src});
     mp[src]=0;
     unordered_set<int>visited;
